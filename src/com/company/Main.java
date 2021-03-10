@@ -11,6 +11,13 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите строку для проверки: ");
+        String st = sc.nextLine();
+        System.out.println(isPalindrome(st));
+    }
+
     public static boolean isPalindrome(String text) {
         text = text.toLowerCase().replaceAll("[^a-z0-9]", "");
         StringBuffer SB_reverse = new StringBuffer(text).reverse();
@@ -18,10 +25,4 @@ public class Main {
         return text.equals(reverse);
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Введите строку для проверки: ");
-        String st = sc.nextLine();
-        System.out.println(isPalindrome(st));
-    }
 }
